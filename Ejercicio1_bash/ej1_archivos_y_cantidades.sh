@@ -94,7 +94,7 @@ else
                     # Evalua los parametros ingresado y ejecuta segun lo que suceda
 
                     # Evalua MOR con ubicacion
-                    if [ $1 == "-m" ] & [ $2 == "-o" ] & [ $3 == "-r" ] & [ -d $i ]; then
+                    if [ $1 == "-m" ] & [ $2 == "-o" ] & [ $3 == "-r" ]; then
                         
                         lista-conFiltro-CONUbicacion
                         echo ''
@@ -103,7 +103,7 @@ else
                         echo "Opcion 1"
                         echo '-------------------------------'
                         # Evalua MO con ubicacion
-                    elif [ $1 == "-m" ] & [ $2 == "-o" ] & [ -d $i ]; then
+                    elif [ $1 == "-m" ] & [ $2 == "-o" ]; then
                         
                         lista-MO-CONUbicacion
                         echo ''
@@ -112,7 +112,7 @@ else
                         echo "Opcion 3"
                         echo '-------------------------------'
                         # Evalua OR con ubicacion
-                    elif [ $1=="-o" ] & [ $2=="-r" ] & [ -d $i ]; then
+                    elif [ $1 == "-o" ] & [ $2 == "-r" ]; then
                         
                         lista-OR-CONUbicacion
                         echo ''
@@ -121,7 +121,7 @@ else
                         echo "Opcion 4"
                         echo '-------------------------------'
                         # Evalua M con ubicacion
-                    elif [ $1=="-m" ] & [ -d $i ]; then
+                    elif [ $1 == "-m" ]; then
                         
                         lista-m-CONUbicacion
                         echo ''
@@ -130,8 +130,7 @@ else
                         echo "Opcion 6"
                         echo '-------------------------------'
                         # Evalua SIN PARAMETROS con ubicacion
-                    elif [ -d $i ]; then
-
+                    else
                         lista-SinFiltros-CONUbicacion $i
                         echo ''
                         contar_archivos $i
@@ -153,9 +152,3 @@ else
         fi
     done
 fi
-
-# # Verifica el orden de los caracteres
-# if [[ ${!#} != $ruta ]] && [ -z ${!#} ]; then
-#     echo 'Codigo de error parametros en orden erroneo'
-#     exit 1
-# fi
