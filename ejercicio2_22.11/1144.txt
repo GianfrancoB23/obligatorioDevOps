@@ -1,0 +1,29 @@
+/home/administrator/obligatorio/prueba.txt
+/home/administrator/obligatorio/ejercicio2_python/prueba.tmp
+/home/administrator/obligatorio/ejercicio2_python/salidaOa.py
+/home/administrator/obligatorio/ejercicio2_python/borrar.sh
+/home/administrator/obligatorio/ejercicio2_python/Apuntes.txt
+/home/administrator/obligatorio/ejercicio2_python/test_ej2.py
+/home/administrator/obligatorio/ejercicio2_python/salidaOc.py
+/home/administrator/obligatorio/ejercicio2_python/1144.txt
+/home/administrator/obligatorio/ejercicio2_python/salidaN.py
+/home/administrator/obligatorio/ejercicio2_python/regExp.py
+/home/administrator/obligatorio/ejercicio2_python/salidaSinOrdenarArchivoAux.py
+/home/administrator/obligatorio/ejercicio2_python/ej2_archivos_y_cantidades_exp.py
+/home/administrator/obligatorio/ejercicio2_python/aux
+/home/administrator/obligatorio/ejercicio2_python/prueba.py
+/home/administrator/obligatorio/ejercicio2_python/salidaOl.py
+/home/administrator/obligatorio/ejercicio2_python/prueba2.py
+/home/administrator/obligatorio/ejercicio2_python/test_ej2_copy.py
+/home/administrator/obligatorio/ejercicio2_python/salidaI.py
+/home/administrator/obligatorio/ejercicio1_bash/ej1_archivos_y_cantidades.sh
+/home/administrator/obligatorio/pruebasEJ1/ej1_enOBLIsinUBI.sh
+/home/administrator/obligatorio/pruebasEJ1/casoDeFede.sh
+/home/administrator/obligatorio/pruebasEJ1/prueba.sh
+/home/administrator/obligatorio/pruebasEJ1/vacio.sh
+/home/administrator/obligatorio/pruebasEJ1/main.sh
+
+Cantidad de archivos listados: 24
+
+Opcion 1 - MOR
+Parametro1-m,Parametro2-o,Parametro3-r
