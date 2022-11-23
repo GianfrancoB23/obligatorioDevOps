@@ -27,54 +27,17 @@
 
 ## Configuración del Bastión Rocky
 
-1. Se instalan los Repositorios Extras de Fedora **sudo dnf install epel-release**
-2. Se instala Ansible **sudo dnf install ansible**
-3. Se instala GIT **sudo dnf install git**
-4. Mediante ventana SSH generamos la clave pública en el equipo Bastión con **ssh-keygen**
-5. Utilizamos el siguente comando para ver el contenido de la SSH Key **cat .ssh/id_rsa.pub**
-6. Dirigase a su cuenta de GitHub por navegador web en SSH and GPG Keys > New SSH Key, pega el contenido en el box
-7. Ingresamos dicha clave en GitHub para tener acceso a nuestro Repositorio
-8. Recordar que en el equipo bastión debe tener instalado el paquete tar **sudo dnf install tar**
-9. En Visual ir a extensiones (imagen del cubo) columna izquierda e instalar SSH y Ansible
-10. Crear un archivo de conexión SSH, columna izquierda anteultima opcion
-11. Necesita elegir tipo de sistema operativo y escribir las credenciales de acceso, se instalan paquetes de Visual.
-12. Utilizamos el siguiente comando **git clone git@github.com:heberdar/OBL_TSL.git**
-13. El repositorio se encuentra en nuestro equipo Bastión.
-14. En el equipo bastión ejecutamos el comando **"ssh-copy-id ansible@192.168.56.20** (esto se realiza por cada equipo que desee automatizar con Ansible).
 
 #
 # Desarrollo del código 
 
 ## Generalidades
 
-En el playbook definimos las siguientes varibales: 
-
-- database_user: nombre del usuario de la base de datos.
-- database_password: password del usuario de la base de datos.
-- database_name: nombre de la base de datos.
-- port_to_open: puerto TCP que se va a abrir en los firewall.
-
-Se utiliza en el código la condicional **"when"** para distinguir la familia de sistema operativo (RedHat o Debian). 
-
-## Archivos a utilizar en el repositorio. 
-
-- app.propierties: Archivo de conexión a base de datos.
-- creartablas.sql: Estructura de tablas para la base de datos.
-- jre-8u321-linux-x64.tar.gz: Archivo comprimido de instalación de **"Java 1.8"**.
-- todo.war: Aplicación a desplegar.
-- tomcat.service: Servicio de tomcat para el sistema operativo. 
-- tomcat.tar.gz: Archivo comprimido de instalación de **"TomCat"**.
 
 ## Roles
 
 ![sudo_visudo](https://github.com/heberdar/OBL_TSL/blob/main/images/Arbol.jpg)
 
-- Creamos el código principal llamado **"codigo.yaml"** y los siguientes roles:
-1. "updateOS"
-2. "installMariaDB"
-3. "createDatabase"
-4. "createUserDB"
-5. "openPorts"
 
 ### 1. Rol: updateOS
 
@@ -94,54 +57,13 @@ Actualiza el sistema operativo según su familia (Debian o RedHat).
 
 Se instala **"MariaDB"** y el complemento **"Python"** utilizado para la ejecución del moódulo **"mysql_db"** de Ansible. Además, en el caso de **Rocky**, dejamos el "enabled" e iniciamos el servicio. Ya que el sistema operativo no lo hace automáticamente como **"Ubuntu"**. 
 
-    - name: Install MariaDB and python complement on Ubuntu
-      apt:
-        name: 
-          - mariadb-server
-          - python3-pymysql
-        state: latest
-      when: ansible_facts['os_family'] == "Debian"
 
-    - name: Install MariaDB and python complement on Rocky
-      package:
-        name: 
-          - mariadb-server
-          - python3
-        state: latest
-      changed_when: true
-      when: ansible_facts['os_family'] == "RedHat"
-
-    - name: start mariadb
-      systemd:
-        name: mariadb
-        enabled: yes
-        state: started
-      when: ansible_facts['os_family'] == "RedHat"
-      
-    - name:  Install pymysql on Rocky
-      become: true
-      pip: 
-        name: pymysql
-        state: present
-      when: ansible_facts['os_family'] == "RedHat"
 
 ### 3. Rol: createDatabase
 
 Se crea la base de datos con el módulo **"mysql_db"**. Discriminamos según sistema operativo, ya que el socket de conexión se encuentra ubicado en diferentes rutas.
 
-    - name: Create Database "{{ database_name }}" on Ubuntu
-      mysql_db:
-        login_unix_socket: /var/run/mysqld/mysqld.sock
-        name: "{{ database_name }}"
-        state: present
-      when: ansible_facts['os_family'] == "Debian"
-    
-    - name: Create Database "{{ database_name }}" on Rocky
-      mysql_db:
-        login_unix_socket: /var/lib/mysql/mysql.sock
-        name: "{{ database_name }}"
-        state: present
-      when: ansible_facts['os_family'] == "RedHat"
+
 
 ### 4. Rol: createUserDB
 
