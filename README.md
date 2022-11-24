@@ -11,32 +11,19 @@
      Este punto es realmente importante, debido a que en cierta parte del codigo, tiene paths hardcodeadas.
 2. Otorgarle los permisos necesarios a los codigos. 
 
-
-![sudo_visudo](https://github.com/heberdar/OBL_TSL/blob/main/images/sudo_visudo.jpg)
-
-## Configuración del Bastión Rocky
-
-1. Se instalan los Repositorios Extras de Fedora **sudo dnf install epel-release**
-2. Se instala Ansible **sudo dnf install ansible**
-3. Se instala GIT **sudo dnf install git**
-4. Mediante ventana SSH generamos la clave pública en el equipo Bastión con **ssh-keygen**
-5. Utilizamos el siguente comando para ver el contenido de la SSH Key **cat .ssh/id_rsa.pub**
-6. Dirigase a su cuenta de GitHub por navegador web en SSH and GPG Keys > New SSH Key, pega el contenido en el box
-7. Ingresamos dicha clave en GitHub para tener acceso a nuestro Repositorio
-8. Recordar que en el equipo bastión debe tener instalado el paquete tar **sudo dnf install tar**
-9. En Visual ir a extensiones (imagen del cubo) columna izquierda e instalar SSH y Ansible
-10. Crear un archivo de conexión SSH, columna izquierda anteultima opcion
-11. Necesita elegir tipo de sistema operativo y escribir las credenciales de acceso, se instalan paquetes de Visual.
-12. Utilizamos el siguiente comando **git clone git@github.com:heberdar/OBL_TSL.git**
-13. El repositorio se encuentra en nuestro equipo Bastión.
-14. En el equipo bastión ejecutamos el comando **"ssh-copy-id ansible@192.168.56.20** (esto se realiza por cada equipo que desee automatizar con Ansible).
-
-#
 # Desarrollo del código 
 
 ## Generalidades
 
-En el playbook definimos las siguientes varibales: 
+Ejercicio 1:
+
+El mismo se desarrollo de la siguiente forma, se establece una variable que se va a utilizar a lo largo del ejercico, seguido de esto se encuentran las funciones que fueron creadas para 
+
+Se crearon carpetas en donde se guarda cada codigo segun el ejercicio.
+En el caso del ejercicio 2, se presentan tambien diferentes codigos para que sea mas sencillo el entender el funcionamiento de los modificadores de python.
+Esos mismos estan ubicados segun si seria llamado el modificador o no.
+
+Por ultimo, el ejercicio 2, hace uso de un script crean en bash para eliminar el archivo auxiliar con el que se trabajo.
 
 - database_user: nombre del usuario de la base de datos.
 - database_password: password del usuario de la base de datos.
