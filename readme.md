@@ -31,5 +31,5 @@ Ejemplos de salidas si se ejecutara correctamente.
 
     $ ./ej1_archivos_y_cantidades.sh -m -o -r /home/administrator/obligatorio/ 
 
-
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/bash/ej1_sinError.gif?raw=true)
 
