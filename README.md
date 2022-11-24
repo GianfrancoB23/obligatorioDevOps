@@ -12,9 +12,6 @@
 2. Otorgarle los permisos necesarios a los codigos. 
 
 
-5. Se crea el usuario **ansible** en ambos equipos
-6. Permisos sin tipeo de contraseña con el siguiente comando escriba **sudo visudo**
-
 ![sudo_visudo](https://github.com/heberdar/OBL_TSL/blob/main/images/sudo_visudo.jpg)
 
 ## Configuración del Bastión Rocky
