@@ -67,6 +67,42 @@ Ejemplo de salida si se ejecutara correctamente.
 
     $ ./ej2_archivos_y_cantidades_exp.py -m -o -r -n -Ol -i
 
-![Animation]()
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/python/sinubicacion.gif?raw=true)
+
+Se solicita ayuda.
+
+- Puede ser llamada la -h sola o con otros parametros, pero si esta presente solamente ejecutara -h
+
+    $ ./ej2_archivos_y_cantidades_exp.py -h
+
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/python/ayuda.gif?raw=true)
+
+Ejemplo de salida si se indicara una expresion regular.
 
     $ ./ej2_archivos_y_cantidades_exp.py -m -o -r -n -Ol -i -e test /home/administrator/obligatorio/ejercicio2_python
+
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/python/expresionregular.gif?raw=true)
+
+Ejemplo de salida si se indicara -Oc.
+
+    $ ./ej2_archivos_y_cantidades_exp.py -m -o -r -n -Oc /home/administrator/obligatorio/ejercicio2_python
+
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/python/oc.gif?raw=true)
+
+Ejemplo de salida si se indicara -Ol.
+
+    $ ./ej2_archivos_y_cantidades_exp.py -m -o -r -n -Ol /home/administrator/obligatorio/ejercicio2_python
+
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/python/ol.gif?raw=true)
+
+Ubicacion invalida.
+
+    $ ./ej2_archivos_y_cantidades_exp.py -m -o -r /home/administrator/obligatorio/fghj -n
+
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/python/ubicacionInvalida.gif?raw=true)
+
+Parametro repetido.
+
+    $./ej2_archivos_y_cantidades_exp.py -m -o -r -n -Ol -Ol /home/administrator/obligatorio/ejercicio2_python/
+
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/python/parametroRepetido.gif?raw=true)
