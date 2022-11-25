@@ -23,13 +23,50 @@ Este puede ser corrido de las siguiente formas.
 
     $ ./ej1_archivos_y_cantidades.sh [-m] [-o] [-r] [ubicacion]
 
-Algo que se destaca, es que tiene que ser ejecutado en ese orden los flags, pudiendo o no estar alguno, pero no podria ser ejecutado lo siguiente:
-
-    $ ./ej1_archivos_y_cantidades.sh -r /home/administrator/ -m
-
-Ejemplos de salidas si se ejecutara correctamente.
+Ejemplo de salida si se ejecutara correctamente.
 
     $ ./ej1_archivos_y_cantidades.sh -m -o -r /home/administrator/obligatorio/ 
 
 ![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/bash/ej1_sinError.gif?raw=true)
+
+    $ ./ej1_archivos_y_cantidades.sh -m -o -r  
+
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/bash/ej1_sinErrorSinUbi.gif?raw=true)
+
+Algo que se destaca, es que tiene que ser ejecutado en ese orden los flags, pudiendo o no estar alguno, pero no podria ser ejecutado lo siguiente:
+
+    $ ./ej1_archivos_y_cantidades.sh -r /home/administrator/obligatorio/ -m
+    
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/bash/ej1_sinErrorModifUbi.gif?raw=true)
+
+Error sin permisos.
+
+    $ ./ej1_archivos_y_cantidades.sh -m -o -r /home/administrator/sinPermisosParaPrueba/
+
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/bash/ej1_errorSinPermisos.gif?raw=true)
+
+Error de ubicacion invalida.
+
+    $ ./ej1_archivos_y_cantidades.sh -m -o -r /home/administrator/obligatorix/ 
+
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/bash/ej1_errorUbi.gif?raw=true)
+
+Error de directorio ingresado vacio.
+
+    $ ./ej1_archivos_y_cantidades.sh -m -o -r /home/administrator/vacioParaPruebas/
+
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/bash/ej1_errorVacio.gif?raw=true)
+
+
+
+
+
+
+
+
+
+
+Ejercicio 2:
+
+- Directorio del ejercicio /home/administrator/obligatorio/ejercicio2_python/
 
