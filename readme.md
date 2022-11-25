@@ -13,9 +13,7 @@
 
 # Desarrollo del código 
 
-### Generalidades
-
-Ejercicio 1:
+### Ejercicio 1:
 
 - En el directorio del ejercicio 1 solamente se encuentra "ej1_archivos_y_cantidades.sh". 
 
@@ -58,15 +56,17 @@ Error de directorio ingresado vacio.
 ![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/bash/ej1_errorVacio.gif?raw=true)
 
 
-
-
-
-
-
-
-
-
-Ejercicio 2:
+### Ejercicio 2:
 
 - Directorio del ejercicio /home/administrator/obligatorio/ejercicio2_python/
+- Aca se encuentran ademas del codigo principal, archivos, en donde se segmento el codigo para facilitar la lectura de como funcionan los modificadores. 
+- Tambien, se encuentra un script de bash, el cual sera utilizado para eliminar el archivo auxiliar creado para ejecutar las acciones que se le indiquen segun los modificadores.
+- A diferencia del primer ejercicio, en este es posible ingresar los parametros en cualquier orden.
 
+Ejemplo de salida si se ejecutara correctamente.
+
+    $ ./ej2_archivos_y_cantidades_exp.py -m -o -r -n -Ol -i
+
+![Animation]()
+
+    $ ./ej2_archivos_y_cantidades_exp.py -m -o -r -n -Ol -i -e test /home/administrator/obligatorio/ejercicio2_python
