@@ -62,6 +62,9 @@ Error de directorio ingresado vacio.
 - Aca se encuentran ademas del codigo principal, archivos, en donde se segmento el codigo para facilitar la lectura de como funcionan los modificadores. 
 - Tambien, se encuentra un script de bash, el cual sera utilizado para eliminar el archivo auxiliar creado para ejecutar las acciones que se le indiquen segun los modificadores.
 - A diferencia del primer ejercicio, en este es posible ingresar los parametros en cualquier orden.
+- En este ejercicio, existen diferentes combinaciones al momento de ingresar modificadores. En caso que se ingrese mas de un modificador que ordena, es decir, "-O {a,c,l}", tomaremos en cuenta el ultimo ingresado. Se deja una tabla a continuacion para entender cuales se ejecutaran. 
+
+![Animation](https://github.com/GianfrancoB23/obligatorioDevOps/blob/main/gifs/python/Posibilidades.jpg?raw=true)
 
 Ejemplo de salida si se ejecutara correctamente.
 
